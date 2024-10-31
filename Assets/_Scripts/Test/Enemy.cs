@@ -42,6 +42,7 @@ public class Enemy : MonoBehaviour
             if (Vector3.Distance(player.transform.position, transform.position) <= attackRange)
             {
                 animator.SetTrigger("attack");
+                print(Vector3.Distance(player.transform.position, transform.position));
                 timePassed = 0;
             }
         }
@@ -65,35 +66,35 @@ public class Enemy : MonoBehaviour
         }
     }
  
-    // void Die()
-    // {
-    //     Instantiate(ragdoll, transform.position,transform.rotation);
-    //     Destroy(this.gameObject);
-    // }
+    void Die()
+    {
+        // Instantiate(ragdoll, transform.position,transform.rotation);
+        Destroy(this.gameObject);
+    }
  
-    // public void TakeDamage(float damageAmount)
-    // {
-    //     health -= damageAmount;
-    //     animator.SetTrigger("damage");
-    //     CameraShake.Instance.ShakeCamera(2f, 0.2f);
+    public void TakeDamage(float damageAmount)
+    {
+        health -= damageAmount;
+        animator.SetTrigger("damage");
+        CameraShake.Instance.ShakeCamera(2f, 0.2f);
  
-    //     if (health <= 0)
-    //     {
-    //         Die();
-    //     }
-    // }
-    // public void StartDealDamage()
-    // {
-    //     GetComponentInChildren<EnemyDamageDealer>().StartDealDamage();
-    // }
-    // public void EndDealDamage()
-    // {
-    //     GetComponentInChildren<EnemyDamageDealer>().EndDealDamage();
-    // }
+        if (health <= 0)
+        {
+            Die();
+        }
+    }
+    public void StartDealDamage()
+    {
+        GetComponentInChildren<EnemyDamageDealer>().StartDealDamage();
+    }
+    public void EndDealDamage()
+    {
+        GetComponentInChildren<EnemyDamageDealer>().EndDealDamage();
+    }
  
     // public void HitVFX(Vector3 hitPosition)
     // {
-    //     GameObject hit = Instantiate(hitVFX, hitPosition, Quaternion.identity);
+    //     // GameObject hit = Instantiate(hitVFX, hitPosition, Quaternion.identity);
     //     Destroy(hit, 3f);
     // }
  
