@@ -30,7 +30,9 @@ public class Enemy : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        animator.SetFloat("speed", agent.velocity.magnitude / agent.speed);
+        // animator.SetFloat("speed", agent.velocity.magnitude / agent.speed);
+        animator.SetFloat("speed", agent.velocity.magnitude);
+
  
         if (player == null)
         {

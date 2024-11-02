@@ -1,35 +1,33 @@
-using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
-public class EnemyDamageDealer : MonoBehaviour
+ 
+public class DamageDealer : MonoBehaviour
 {
     bool canDealDamage;
-    bool hasDealtDamage;
+    List<GameObject> hasDealtDamage;
  
     [SerializeField] float weaponLength;
     [SerializeField] float weaponDamage;
     void Start()
     {
         canDealDamage = false;
-        hasDealtDamage = false;
+        hasDealtDamage = new List<GameObject>();
     }
  
-    // Update is called once per frame
     void Update()
     {
-        if (canDealDamage && !hasDealtDamage)
+        if (canDealDamage)
         {
             RaycastHit hit;
  
-            int layerMask = 1 << 8;
+            int layerMask = 1 << 9;
             if (Physics.Raycast(transform.position, -transform.up, out hit, weaponLength, layerMask))
             {
-                if (hit.transform.TryGetComponent(out HealthSystem health))
+                if (hit.transform.TryGetComponent(out Enemy enemy) && !hasDealtDamage.Contains(hit.transform.gameObject))
                 {
-                    health.TakeDamage(weaponDamage);
-                    // health.HitVFX(hit.point);
-                    hasDealtDamage = true;
+                    enemy.TakeDamage(weaponDamage);
+                    // enemy.HitVFX(hit.point);
+                    hasDealtDamage.Add(hit.transform.gameObject);
                 }
             }
         }
@@ -37,7 +35,7 @@ public class EnemyDamageDealer : MonoBehaviour
     public void StartDealDamage()
     {
         canDealDamage = true;
-        hasDealtDamage = false;
+        hasDealtDamage.Clear();
     }
     public void EndDealDamage()
     {

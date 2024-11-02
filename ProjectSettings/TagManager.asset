@@ -6,6 +6,7 @@ TagManager:
   tags:
   - rightCollider
   - leftCollider
+  - CinemachineTarget
   layers:
   - Default
   - TransparentFX
