@@ -29,7 +29,7 @@ public class VRMap_test
     public void MapHead()
     {
         rigTarget.position = robotOrigin.position + scaleUp * (vrTarget.TransformPoint(trackingPositionOffset) - playerOriginMainCam.position);
-        rigTarget.rotation = headTurnCam.rotation * Quaternion.Euler(trackingRotationOffset);
+        // rigTarget.rotation = headTurnCam.rotation * Quaternion.Euler(trackingRotationOffset);
         // rigTarget.position = Vector3.Lerp(rigTarget.position, robotOrigin.position + scaleUp * (vrTarget.TransformPoint(trackingPositionOffset) - playerOriginMainCam.position), delay * Time.deltaTime);
 
 
