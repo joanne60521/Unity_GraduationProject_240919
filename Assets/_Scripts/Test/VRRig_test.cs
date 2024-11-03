@@ -12,7 +12,7 @@ public class VRMap_test
 
     public GameObject robotOrigin;
     public Transform playerOriginMainCam;
-    public Transform headTurnCam;
+    // public Transform headTurnCam;
     public float scaleUp = 12.5f;
     public float delay = 2.5f;
 
