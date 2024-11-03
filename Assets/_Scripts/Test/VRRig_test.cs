@@ -1,6 +1,9 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.InputSystem;
+using TMPro;
+
 
 [System.Serializable]  //讓 class VRMap 顯示在 Inspector
 public class VRMap_test
@@ -12,24 +15,43 @@ public class VRMap_test
 
     public GameObject robotOrigin;
     public Transform playerOriginMainCam;
-    // public Transform headTurnCam;
     public float scaleUp = 12.5f;
     public float delay = 2.5f;
 
+    [HideInInspector]
     public Vector3 positionA;
+    [HideInInspector]
     public Vector3 rotatedPositionA;
+
+
+
+    // attack mode
+    public InputActionReference velocityReference;
+    public TextMeshProUGUI mytext;
+
+    [HideInInspector]
+    public float velocityValue = 0;
+    [HideInInspector]
+    public bool attacking = false;
+    [HideInInspector]
+    public bool attackMode = false;
+
+
 
 
 
     public void Map()
     {
-        // rigTarget.position = vrTarget.TransformPoint(trackingPositionOffset);
+        velocityValue = velocityReference.action.ReadValue<Vector3>().z;
+
+
+
+
         rigTarget.rotation = vrTarget.rotation * Quaternion.Euler(trackingRotationOffset);
         // 以RobotOrigin為中心的手的位置
         positionA = robotOrigin.transform.position + scaleUp * (vrTarget.TransformPoint(trackingPositionOffset) - playerOriginMainCam.position);
         rotatedPositionA = robotOrigin.transform.rotation * (positionA - robotOrigin.transform.position) + robotOrigin.transform.position;
         rigTarget.position = Vector3.Lerp(rigTarget.position, rotatedPositionA, delay * Time.deltaTime);
-
     }
 
 

@@ -2656,19 +2656,8 @@
                 },
                 {
                     "name": "",
-                    "id": "97c9715a-dd4d-4157-80de-4c268ba15abb",
-                    "path": "<WMRSpatialController>{LeftHand}/devicePose/velocity",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "LeftVelocity",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
-                    "id": "3a0728b3-bf57-49c1-8dcf-1558e2cad311",
-                    "path": "<QuestProTouchController>{LeftHand}/devicePose/velocity",
+                    "id": "f1a195fb-0c16-4ac5-98da-8bf3eba4629e",
+                    "path": "<OculusTouchController>{LeftHand}/devicePose/velocity",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
@@ -2689,19 +2678,8 @@
                 },
                 {
                     "name": "",
-                    "id": "ac59e6c3-7fb3-4c32-9bdb-625f8c3eb917",
-                    "path": "<WMRSpatialController>{RightHand}/devicePose/velocity",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "RightVelocity",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
                     "id": "6017ea60-d02a-4af8-8f78-77b3c81936e5",
-                    "path": "<QuestProTouchController>{RightHand}/devicePose/velocity",
+                    "path": "<OculusTouchController>{RightHand}/devicePose/velocity",
                     "interactions": "",
                     "processors": "",
                     "groups": "",

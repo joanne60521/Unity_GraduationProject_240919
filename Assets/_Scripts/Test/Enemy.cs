@@ -44,7 +44,6 @@ public class Enemy : MonoBehaviour
             if (Vector3.Distance(player.transform.position, transform.position) <= attackRange)
             {
                 animator.SetTrigger("attack");
-                print(Vector3.Distance(player.transform.position, transform.position));
                 timePassed = 0;
             }
         }

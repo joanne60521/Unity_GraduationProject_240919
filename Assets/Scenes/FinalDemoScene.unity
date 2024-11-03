@@ -3198,6 +3198,11 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: f78efb9e32d451048a5ea854ac47d6f0,
+        type: 3}
+      propertyPath: m_TagString
+      value: Player
+      objectReference: {fileID: 0}
     - target: {fileID: 5087078386508475528, guid: f78efb9e32d451048a5ea854ac47d6f0,
         type: 3}
       propertyPath: m_IsActive
@@ -4870,8 +4875,8 @@ Light:
   serializedVersion: 10
   m_Type: 1
   m_Shape: 0
-  m_Color: {r: 1, g: 0.95686275, b: 0.8392157, a: 1}
-  m_Intensity: 1
+  m_Color: {r: 1, g: 0.97748244, b: 0.92156863, a: 1}
+  m_Intensity: 1.92
   m_Range: 10
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
@@ -24736,6 +24741,11 @@ MonoBehaviour:
     delay: 2.5
     positionA: {x: 0, y: 0, z: 0}
     rotatedPositionA: {x: 0, y: 0, z: 0}
+    velocityReference: {fileID: 0}
+    mytext: {fileID: 0}
+    velocityValue: 0
+    attacking: 0
+    attackMode: 0
   leftHand:
     vrTarget: {fileID: 2100814115}
     rigTarget: {fileID: 796711154}
@@ -24747,6 +24757,11 @@ MonoBehaviour:
     delay: 2.5
     positionA: {x: 0, y: 0, z: 0}
     rotatedPositionA: {x: 0, y: 0, z: 0}
+    velocityReference: {fileID: 0}
+    mytext: {fileID: 0}
+    velocityValue: 0
+    attacking: 0
+    attackMode: 0
   rightHand:
     vrTarget: {fileID: 475419607}
     rigTarget: {fileID: 1874725877}
@@ -24758,6 +24773,11 @@ MonoBehaviour:
     delay: 2.5
     positionA: {x: 0, y: 0, z: 0}
     rotatedPositionA: {x: 0, y: 0, z: 0}
+    velocityReference: {fileID: 0}
+    mytext: {fileID: 0}
+    velocityValue: 0
+    attacking: 0
+    attackMode: 0
   robotOrigin: {fileID: 200219798}
   cubeeRed: {fileID: 8750033260632701696, guid: cf0870f199adadd45b61d8b4014c533a,
     type: 3}
@@ -28913,7 +28933,7 @@ GameObject:
   - component: {fileID: 1037819451}
   m_Layer: 0
   m_Name: PlayerRobot
-  m_TagString: Player
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -30715,6 +30735,12 @@ MonoBehaviour:
     delay: 2.5
     positionA: {x: 0, y: 0, z: 0}
     rotatedPositionA: {x: 0, y: 0, z: 0}
+    velocityReference: {fileID: -7925152284794732040, guid: c348712bda248c246b8c49b3db54643f,
+      type: 3}
+    mytext: {fileID: 242869403}
+    velocityValue: 0
+    attacking: 0
+    attackMode: 0
   leftHand:
     vrTarget: {fileID: 2100814115}
     rigTarget: {fileID: 1165893183}
@@ -30726,6 +30752,12 @@ MonoBehaviour:
     delay: 2.5
     positionA: {x: 0, y: 0, z: 0}
     rotatedPositionA: {x: 0, y: 0, z: 0}
+    velocityReference: {fileID: -7925152284794732040, guid: c348712bda248c246b8c49b3db54643f,
+      type: 3}
+    mytext: {fileID: 242869403}
+    velocityValue: 0
+    attacking: 0
+    attackMode: 0
   rightHand:
     vrTarget: {fileID: 475419607}
     rigTarget: {fileID: 1187849011}
@@ -30737,6 +30769,12 @@ MonoBehaviour:
     delay: 2.5
     positionA: {x: 0, y: 0, z: 0}
     rotatedPositionA: {x: 0, y: 0, z: 0}
+    velocityReference: {fileID: 7031451668641621960, guid: c348712bda248c246b8c49b3db54643f,
+      type: 3}
+    mytext: {fileID: 242869403}
+    velocityValue: 0
+    attacking: 0
+    attackMode: 0
   robotOrigin: {fileID: 465243383}
   cubeeRed: {fileID: 8750033260632701696, guid: cf0870f199adadd45b61d8b4014c533a,
     type: 3}
@@ -35265,6 +35303,11 @@ MonoBehaviour:
     delay: 2.5
     positionA: {x: 0, y: 0, z: 0}
     rotatedPositionA: {x: 0, y: 0, z: 0}
+    velocityReference: {fileID: 0}
+    mytext: {fileID: 0}
+    velocityValue: 0
+    attacking: 0
+    attackMode: 0
   leftHand:
     vrTarget: {fileID: 2100814115}
     rigTarget: {fileID: 1660281712}
@@ -35276,6 +35319,11 @@ MonoBehaviour:
     delay: 2.5
     positionA: {x: 0, y: 0, z: 0}
     rotatedPositionA: {x: 0, y: 0, z: 0}
+    velocityReference: {fileID: 0}
+    mytext: {fileID: 0}
+    velocityValue: 0
+    attacking: 0
+    attackMode: 0
   rightHand:
     vrTarget: {fileID: 475419607}
     rigTarget: {fileID: 845636899}
@@ -35287,6 +35335,11 @@ MonoBehaviour:
     delay: 2.5
     positionA: {x: 0, y: 0, z: 0}
     rotatedPositionA: {x: 0, y: 0, z: 0}
+    velocityReference: {fileID: 0}
+    mytext: {fileID: 0}
+    velocityValue: 0
+    attacking: 0
+    attackMode: 0
   robotOrigin: {fileID: 538115960}
   cubeeRed: {fileID: 8750033260632701696, guid: cf0870f199adadd45b61d8b4014c533a,
     type: 3}
