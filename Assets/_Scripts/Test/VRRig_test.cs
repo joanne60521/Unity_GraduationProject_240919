@@ -28,8 +28,6 @@ public class VRMap_test
         // 以RobotOrigin為中心的手的位置
         positionA = robotOrigin.transform.position + scaleUp * (vrTarget.TransformPoint(trackingPositionOffset) - playerOriginMainCam.position);
         rotatedPositionA = robotOrigin.transform.rotation * (positionA - robotOrigin.transform.position) + robotOrigin.transform.position;
-        // Debug.Log(robotOrigin.transform.rotation);
-        Debug.Log(positionA);
         rigTarget.position = Vector3.Lerp(rigTarget.position, rotatedPositionA, delay * Time.deltaTime);
 
     }
