@@ -12033,7 +12033,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Weight: 1
   m_Data:
-    m_Root: {fileID: 914620814}
+    m_Root: {fileID: 323898069}
     m_Mid: {fileID: 914620789}
     m_Tip: {fileID: 914620773}
     m_Target: {fileID: 1874725877}
@@ -20894,7 +20894,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Weight: 1
   m_Data:
-    m_Root: {fileID: 914620812}
+    m_Root: {fileID: 323898068}
     m_Mid: {fileID: 914620795}
     m_Tip: {fileID: 914620796}
     m_Target: {fileID: 796711154}
@@ -23600,6 +23600,21 @@ PrefabInstance:
         type: 3}
       propertyPath: m_IsActive
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3678293515245617219, guid: 8f729c5acab4e244abab2af612af6e78,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3678293515245617219, guid: 8f729c5acab4e244abab2af612af6e78,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 2.038
+      objectReference: {fileID: 0}
+    - target: {fileID: 3678293515245617219, guid: 8f729c5acab4e244abab2af612af6e78,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.094
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
