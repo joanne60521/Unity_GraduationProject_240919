@@ -43,6 +43,8 @@ public class VRRig_test : MonoBehaviour
     public VRMap_test head;
     public VRMap_test leftHand;
     public VRMap_test rightHand;
+    public Transform robotOrigin;
+
 
     public Transform headConstraint;
     private Vector3 headBodyOffset;
@@ -60,5 +62,7 @@ public class VRRig_test : MonoBehaviour
         head.MapHead();
         leftHand.Map();
         rightHand.Map();
+
+        transform.rotation = robotOrigin.transform.rotation;
     }
 }
