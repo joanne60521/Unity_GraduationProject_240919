@@ -11,7 +11,7 @@ public class EnemyCollider : MonoBehaviour
 
     void Start()
     {
-        VRRig_Robot = GameObject.Find("Arms test").GetComponent<VRRig_Robot>();
+        // VRRig_Robot = GameObject.Find("Arms test").GetComponent<VRRig_Robot>();
     }
 
     private void OnCollisionEnter(Collision col)

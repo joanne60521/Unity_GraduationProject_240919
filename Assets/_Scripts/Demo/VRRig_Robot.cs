@@ -34,7 +34,7 @@ public class VRMap_RobotArm
         if (attackMode)
         {
             velocityValue = velocityReference.action.ReadValue<Vector3>().z;
-            Debug.Log(velocityValue);
+            Debug.Log("controller velocity: " + velocityValue);
             if (velocityValue > 0.5)
             {
                 attacking = true;

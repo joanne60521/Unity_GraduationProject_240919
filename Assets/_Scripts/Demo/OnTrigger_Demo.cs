@@ -32,13 +32,11 @@ public class OnTrigger_Demo : MonoBehaviour
         {
             if (!VRRig_Robot.leftHand.attacking)
             {
-                Debug.Log(col.gameObject.tag + " : normal mode");
                 mytext.text = "> normal mode";
                 VRRig_Robot.leftHand.attackMode = false;
             }
             if (!VRRig_Robot.rightHand.attacking)
             {
-                Debug.Log(col.gameObject.tag + " : normal mode");
                 mytext.text = "> normal mode";
                 VRRig_Robot.rightHand.attackMode = false;
             }
