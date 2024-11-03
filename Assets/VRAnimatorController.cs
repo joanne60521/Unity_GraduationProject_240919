@@ -14,30 +14,29 @@ public class VRAnimatorController : MonoBehaviour
     {
         animator = GetComponent<Animator>();
         vRRig_Test = GetComponent<VRRig_test>();
-        previousPos = vRRig_Test.head.rigTarget.position;
-        // previousPos = RobotOrigin.transform.position;
+        // previousPos = vRRig_Test.head.rigTarget.position;
+        previousPos = RobotOrigin.transform.position;
     }
 
     // Update is called once per frame
     void Update()
     {
-        // compute the speed
-        Vector3 headsetSpeed = (vRRig_Test.head.rigTarget.position - previousPos) / Time.deltaTime;
-        headsetSpeed.y = 0;
+        // // compute the speed
+        // Vector3 headsetSpeed = (vRRig_Test.head.rigTarget.position - previousPos) / Time.deltaTime;
+        // headsetSpeed.y = 0;
+
         // // local speed
-        Vector3 headsetLocalSpeed = transform.InverseTransformDirection(headsetSpeed);
-        previousPos = vRRig_Test.head.rigTarget.position;
+        // Vector3 headsetLocalSpeed = transform.InverseTransformDirection(headsetSpeed);
+        // previousPos = vRRig_Test.head.rigTarget.position;
 
         // // set animator values
-        animator.SetBool("isMoving", headsetLocalSpeed.magnitude > speedThreshold);
-        print(vRRig_Test.head.rigTarget.position);
-        // animator.SetFloat("directionX", Mathf.Clamp(headsetLocalSpeed.x, -1 ,1));
-        // animator.SetFloat("directionY", Mathf.Clamp(headsetLocalSpeed.z, -1 ,1));
+        // animator.SetBool("isMoving", headsetLocalSpeed.magnitude > speedThreshold);
+        // print(vRRig_Test.head.rigTarget.position);
 
-
-        // Vector3 RobotOriginSpeed = RobotOrigin.transform.position - previousPos;
-        // RobotOriginSpeed.y = 0;
-        // previousPos = RobotOrigin.transform.position;
-        // animator.SetBool("isMoving", RobotOriginSpeed.magnitude > speedThreshold);
+        // use RobotOrigin as origin
+        Vector3 RobotOriginSpeed = RobotOrigin.transform.position - previousPos;
+        RobotOriginSpeed.y = 0;
+        previousPos = RobotOrigin.transform.position;
+        animator.SetBool("isMoving", RobotOriginSpeed.magnitude > speedThreshold);
     }
 }

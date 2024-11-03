@@ -13,10 +13,11 @@ ModelImporter:
     legacyGenerateAnimations: 4
     bakeSimulation: 0
     resampleCurves: 1
-    optimizeGameObjects: 0
+    optimizeGameObjects: 1
     removeConstantScaleCurves: 0
     motionNodeName: 
-    rigImportErrors: 
+    rigImportErrors: "Invalid Avatar Rig Configuration. Missing or invalid transform:\n\tRequired
+      human bone 'LeftUpperLeg' not found\n"
     rigImportWarnings: 
     animationImportErrors: 
     animationImportWarnings: 
@@ -24,7 +25,7 @@ ModelImporter:
     animationDoRetargetingWarnings: 0
     importAnimatedCustomProperties: 0
     importConstraints: 0
-    animationCompression: 1
+    animationCompression: 3
     animationRotationError: 0.5
     animationPositionError: 0.5
     animationScaleError: 0.5
@@ -54,7 +55,7 @@ ModelImporter:
     weldVertices: 1
     bakeAxisConversion: 0
     preserveHierarchy: 0
-    skinWeightsMode: 0
+    skinWeightsMode: 1
     maxBonesPerVertex: 4
     minBoneWeight: 0.001
     optimizeBones: 1
@@ -81,8 +82,217 @@ ModelImporter:
   importAnimation: 1
   humanDescription:
     serializedVersion: 3
-    human: []
-    skeleton: []
+    human:
+    - boneName: Pevis
+      humanName: Hips
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Main body
+      humanName: Spine
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Head
+      humanName: Head
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Arm R
+      humanName: RightShoulder
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Arm L
+      humanName: LeftUpperArm
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Upper_arm R
+      humanName: RightUpperArm
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Upper_arm L
+      humanName: LeftLowerArm
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: upper_arm_2 L
+      humanName: LeftHand
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    skeleton:
+    - name: Robot_Rigged_V1(Clone)
+      parentName: 
+      position: {x: 0, y: 0, z: 0}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Export V1
+      parentName: Robot_Rigged_V1(Clone)
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Forearm_IK L
+      parentName: Robot_Rigged_V1(Clone)
+      position: {x: 0.2847693, y: 3.663656, z: -1.3413107}
+      rotation: {x: -0.0000019233307, y: -0.0000019233307, z: -0.7071068, w: 0.7071068}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Forearm R
+      parentName: Robot_Rigged_V1(Clone)
+      position: {x: 0.28476954, y: 4.628858, z: 1.3413107}
+      rotation: {x: -0.00000274, y: -1.6777615e-22, z: 1, w: 6.123234e-17}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Forearm_IK R
+      parentName: Robot_Rigged_V1(Clone)
+      position: {x: 0.28476954, y: 3.663656, z: 1.3413107}
+      rotation: {x: 0.0000019551505, y: 0.0000019551505, z: -0.7071068, w: 0.7071068}
+      scale: {x: 1, y: 0.99999994, z: 1}
+    - name: Pevis_2 L
+      parentName: Robot_Rigged_V1(Clone)
+      position: {x: 0.23165949, y: 3.777902, z: -0.18331182}
+      rotation: {x: 0.00000003181981, y: -0.7071068, z: 0.7071068, w: -0.000000074246216}
+      scale: {x: 1, y: 0.99999976, z: 1}
+    - name: Thigh L
+      parentName: Pevis_2 L
+      position: {x: -0.000000002101958, y: 0.4649675, z: 0}
+      rotation: {x: 0.7071068, y: -0.000000053033038, z: -0.00000015909906, w: 0.7071068}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Leg L
+      parentName: Thigh L
+      position: {x: -0, y: 1.4244351, z: -1.4210854e-16}
+      rotation: {x: -6.1629766e-33, y: -0, z: 1.469368e-39, w: 1}
+      scale: {x: 1, y: 0.99999994, z: 1}
+    - name: Foot L
+      parentName: Leg L
+      position: {x: -0, y: 1.5789659, z: -1.4210854e-16}
+      rotation: {x: -0.00000018410306, y: -0.00000015727012, z: -0.44721365, w: 0.8944272}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Leg_IK L
+      parentName: Robot_Rigged_V1(Clone)
+      position: {x: 0.2316595, y: 0.77450085, z: -0.6482793}
+      rotation: {x: 0, y: 4.32978e-17, z: -0.7071067, w: 0.7071068}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Pevis_2 R
+      parentName: Robot_Rigged_V1(Clone)
+      position: {x: 0.23165952, y: 3.777902, z: 0.18331178}
+      rotation: {x: 0.7071068, y: 0.00000006363962, z: 0.00000004242641, w: 0.7071068}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Thigh R
+      parentName: Pevis_2 R
+      position: {x: -0.0000000039490256, y: 0.46496752, z: -5.684342e-16}
+      rotation: {x: -0.00000015909905, y: 0.7071068, z: 0.7071068, w: -0.000000053033013}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Leg R
+      parentName: Thigh R
+      position: {x: -0, y: 1.4244351, z: -1.4210854e-16}
+      rotation: {x: 1.4513239e-33, y: -0.000000015, z: 9.1848505e-25, w: 1}
+      scale: {x: 1, y: 0.99999994, z: 1}
+    - name: Foot R
+      parentName: Leg R
+      position: {x: -0, y: 1.5789659, z: -1.4210854e-16}
+      rotation: {x: -0.21045332, y: -0.42090696, z: -0.39460036, w: 0.7892004}
+      scale: {x: 1.0000001, y: 1, z: 1}
+    - name: Leg_IK R
+      parentName: Robot_Rigged_V1(Clone)
+      position: {x: 0.23165952, y: 0.77450085, z: 0.6482793}
+      rotation: {x: -4.3578816e-33, y: 4.3297796e-17, z: -0.7071067, w: 0.7071069}
+      scale: {x: 1, y: 0.99999994, z: 1}
+    - name: Pevis
+      parentName: Robot_Rigged_V1(Clone)
+      position: {x: 0.2847694, y: 3.4774556, z: -3.4874193e-17}
+      rotation: {x: -6.123234e-17, y: 1, z: 6.123234e-17, w: -6.123234e-17}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Main body
+      parentName: Pevis
+      position: {x: -0, y: 0.92059255, z: 5.6370036e-17}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Arm L
+      parentName: Main body
+      position: {x: -0, y: 1.4347677, z: 0.61767703}
+      rotation: {x: 0.49909696, y: 0.49476066, z: -0.5008479, w: 0.5052382}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Upper_arm L
+      parentName: Arm L
+      position: {x: 0.0000000036625718, y: 0.7236877, z: -8.91996e-10}
+      rotation: {x: 0.0040770466, y: 0.0043995376, z: -0.0043457593, w: 0.9999726}
+      scale: {x: 1, y: 0.99999994, z: 0.99999994}
+    - name: upper_arm_2 L
+      parentName: Upper_arm L
+      position: {x: -0, y: 0.3651042, z: 0.00000008397397}
+      rotation: {x: -1.323489e-23, y: -4.2351647e-22, z: -1.009742e-28, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Upper_arm_3 L
+      parentName: upper_arm_2 L
+      position: {x: -0, y: 0.44483232, z: 0.00000010231144}
+      rotation: {x: -1.323489e-23, y: -4.2351647e-22, z: -1.009742e-28, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Arm_padding L
+      parentName: Arm L
+      position: {x: 0.0000000036625718, y: 0.7236877, z: -8.91996e-10}
+      rotation: {x: -0.70277196, y: 0.00000002529522, z: 0.0000039600263, w: 0.71141523}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Arm R
+      parentName: Main body
+      position: {x: -0.00000009, y: 1.4347677, z: -0.61767703}
+      rotation: {x: -0.4441584, y: 0.5765152, z: -0.54871655, w: -0.4114168}
+      scale: {x: 1, y: 1, z: 1.0000001}
+    - name: Arm_padding R
+      parentName: Arm R
+      position: {x: -5.404943e-10, y: 0.7236877, z: -8.60324e-10}
+      rotation: {x: -0.7019324, y: 0.00000008297343, z: 0.034341145, w: 0.71141523}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Upper_arm R
+      parentName: Arm R
+      position: {x: -5.404943e-10, y: 0.7236877, z: -8.60324e-10}
+      rotation: {x: 0.13355836, y: 0.97807395, z: 0.019142093, w: -0.1586415}
+      scale: {x: 1.0000001, y: 1, z: 1.0000001}
+    - name: upper_arm_2 R
+      parentName: Upper_arm R
+      position: {x: -0.000000003651041, y: 0.36510414, z: -0.000000025557288}
+      rotation: {x: 3.9999993e-16, y: -0.000000039999996, z: 2.7999972e-15, w: 1}
+      scale: {x: 1, y: 0.9999999, z: 1}
+    - name: Upper_arm_3 R
+      parentName: upper_arm_2 R
+      position: {x: -0.000000004448322, y: 0.4448323, z: -0.000000031138253}
+      rotation: {x: 6.617445e-24, y: 4.5034683e-22, z: -3e-45, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Head
+      parentName: Main body
+      position: {x: -0, y: 2.0696635, z: 1.2673034e-16}
+      rotation: {x: -4.401008e-34, y: -0.00000012, z: -7.347881e-24, w: 1}
+      scale: {x: 1, y: 0.99999994, z: 1}
+    - name: Forearm L
+      parentName: Robot_Rigged_V1(Clone)
+      position: {x: 0.2847693, y: 4.628858, z: -1.3413107}
+      rotation: {x: 0.00000274, y: -1.6777615e-22, z: 1, w: -6.123234e-17}
+      scale: {x: 1, y: 1, z: 1}
     armTwist: 0.5
     foreArmTwist: 0.5
     upperLegTwist: 0.5
@@ -93,13 +303,13 @@ ModelImporter:
     globalScale: 1
     rootMotionBoneName: 
     hasTranslationDoF: 0
-    hasExtraRoot: 0
+    hasExtraRoot: 1
     skeletonHasParents: 1
   lastHumanDescriptionAvatarSource: {instanceID: 0}
   autoGenerateAvatarMappingIfUnspecified: 1
-  animationType: 2
+  animationType: 3
   humanoidOversampling: 1
-  avatarSetup: 0
+  avatarSetup: 1
   addHumanoidExtraRootOnlyWhenUsingAvatar: 1
   importBlendShapeDeformPercent: 1
   remapMaterialsIfMaterialImportModeIsNone: 0
