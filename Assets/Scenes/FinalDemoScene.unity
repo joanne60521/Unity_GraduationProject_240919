@@ -5662,6 +5662,7 @@ MonoBehaviour:
   leftControllerReference: {fileID: -5861253619668752441, guid: c348712bda248c246b8c49b3db54643f,
     type: 3}
   turnValue: 20
+  RobotOrigin: {fileID: 0}
 --- !u!1 &227405210
 GameObject:
   m_ObjectHideFlags: 0
@@ -9798,7 +9799,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &346456199
 Transform:
   m_ObjectHideFlags: 0
@@ -24342,32 +24343,42 @@ MonoBehaviour:
     rigTarget: {fileID: 1112367620}
     trackingPositionOffset: {x: 0, y: 0, z: 0}
     trackingRotationOffset: {x: 0, y: 0, z: 0}
-    robotOrigin: {fileID: 200219799}
+    robotOrigin: {fileID: 200219798}
     playerOriginMainCam: {fileID: 418587834}
     headTurnCam: {fileID: 1490468522}
     scaleUp: 12.5
     delay: 2.5
+    positionA: {x: 0, y: 0, z: 0}
+    rotatedPositionA: {x: 0, y: 0, z: 0}
   leftHand:
     vrTarget: {fileID: 2100814115}
     rigTarget: {fileID: 796711154}
     trackingPositionOffset: {x: 0, y: 0, z: 0}
     trackingRotationOffset: {x: 90, y: 0, z: 0}
-    robotOrigin: {fileID: 200219799}
+    robotOrigin: {fileID: 200219798}
     playerOriginMainCam: {fileID: 418587834}
     headTurnCam: {fileID: 1490468522}
     scaleUp: 12.5
     delay: 2.5
+    positionA: {x: 0, y: 0, z: 0}
+    rotatedPositionA: {x: 0, y: 0, z: 0}
   rightHand:
     vrTarget: {fileID: 475419607}
     rigTarget: {fileID: 1874725877}
     trackingPositionOffset: {x: 0, y: 0, z: 0}
     trackingRotationOffset: {x: 90, y: 0, z: 0}
-    robotOrigin: {fileID: 200219799}
+    robotOrigin: {fileID: 200219798}
     playerOriginMainCam: {fileID: 418587834}
     headTurnCam: {fileID: 1490468522}
     scaleUp: 12.5
     delay: 2.5
-  robotOrigin: {fileID: 200219799}
+    positionA: {x: 0, y: 0, z: 0}
+    rotatedPositionA: {x: 0, y: 0, z: 0}
+  robotOrigin: {fileID: 200219798}
+  cubeeRed: {fileID: 8750033260632701696, guid: cf0870f199adadd45b61d8b4014c533a,
+    type: 3}
+  cubeeBlue: {fileID: 5273868667730710604, guid: 051f7500b8da6934a981701d5031c678,
+    type: 3}
   headConstraint: {fileID: 1112367620}
 --- !u!114 &914620832
 MonoBehaviour:
@@ -28434,6 +28445,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1037819451}
+  - component: {fileID: 1037819453}
+  - component: {fileID: 1037819452}
   m_Layer: 0
   m_Name: PlayerRobot
   m_TagString: Player
@@ -28459,6 +28472,34 @@ Transform:
   - {fileID: 200219799}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1037819452
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1037819450}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0f2bc69d8e63706479fc6cfc3e502274, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Cameras: {fileID: 1490468521}
+--- !u!114 &1037819453
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1037819450}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1d86468ca33e3624e909f49693180509, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rightThumbstickReference: {fileID: 6742598922123086646, guid: c348712bda248c246b8c49b3db54643f,
+    type: 3}
+  speed: 10
 --- !u!1 &1040163381
 GameObject:
   m_ObjectHideFlags: 0
@@ -34612,6 +34653,8 @@ MonoBehaviour:
     headTurnCam: {fileID: 1490468522}
     scaleUp: 12.5
     delay: 2.5
+    positionA: {x: 0, y: 0, z: 0}
+    rotatedPositionA: {x: 0, y: 0, z: 0}
   leftHand:
     vrTarget: {fileID: 2100814115}
     rigTarget: {fileID: 1660281712}
@@ -34622,6 +34665,8 @@ MonoBehaviour:
     headTurnCam: {fileID: 1490468522}
     scaleUp: 12.5
     delay: 2.5
+    positionA: {x: 0, y: 0, z: 0}
+    rotatedPositionA: {x: 0, y: 0, z: 0}
   rightHand:
     vrTarget: {fileID: 475419607}
     rigTarget: {fileID: 845636899}
@@ -34632,7 +34677,13 @@ MonoBehaviour:
     headTurnCam: {fileID: 1490468522}
     scaleUp: 12.5
     delay: 2.5
+    positionA: {x: 0, y: 0, z: 0}
+    rotatedPositionA: {x: 0, y: 0, z: 0}
   robotOrigin: {fileID: 538115960}
+  cubeeRed: {fileID: 8750033260632701696, guid: cf0870f199adadd45b61d8b4014c533a,
+    type: 3}
+  cubeeBlue: {fileID: 5273868667730710604, guid: 051f7500b8da6934a981701d5031c678,
+    type: 3}
   headConstraint: {fileID: 57114280}
 --- !u!114 &1244785542
 MonoBehaviour:
@@ -40424,6 +40475,7 @@ MonoBehaviour:
   leftControllerReference: {fileID: -5861253619668752441, guid: c348712bda248c246b8c49b3db54643f,
     type: 3}
   turnValue: 20
+  RobotOrigin: {fileID: 200219798}
 --- !u!1 &1495662557
 GameObject:
   m_ObjectHideFlags: 0

@@ -9,6 +9,7 @@ public class TurnHeadByThumbstick : MonoBehaviour
     [SerializeField] float turnValue = 20;
     private float thumbstickX;
     private float thumbstickY;
+    public GameObject RobotOrigin;
 
 
     void Start()
@@ -32,5 +33,8 @@ public class TurnHeadByThumbstick : MonoBehaviour
             // Debug.Log(mytransform.rotation.x);
             transform.eulerAngles += new Vector3(-turnValue * Time.deltaTime * thumbstickY, 0, 0);
         }
+
+
+        transform.position = RobotOrigin.transform.position;
     }
 }
