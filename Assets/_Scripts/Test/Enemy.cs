@@ -2,7 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
- 
+using UnityEngine.UIElements;
+
 public class Enemy : MonoBehaviour
 {
     [SerializeField] float health = 3;
@@ -21,7 +22,10 @@ public class Enemy : MonoBehaviour
     float newDestinationCD = 0.5f;
 
 
-    public EnemyCollider enemyCollider;
+    public HealthBar healthBar;
+    [SerializeField] public ParticleSystem explode;
+    private bool died = false;
+
 
 
  
@@ -30,7 +34,6 @@ public class Enemy : MonoBehaviour
         agent = GetComponent<NavMeshAgent>();
         animator = GetComponent<Animator>();
         player = GameObject.FindGameObjectWithTag("Player");
-
     }
     
  
@@ -65,18 +68,27 @@ public class Enemy : MonoBehaviour
         transform.LookAt(player.transform);
 
 
-        if (enemyCollider.blood <= 0)
+        if (healthBar.hp <= 0)
         {
-            StartCoroutine(DelayedAction());
-
+            if (!died)
+            {
+                animator.SetTrigger("hp=0");
+                StartCoroutine(DelayedAction());
+                StartCoroutine(DelayedAction1());
+                died = true;
+            }
         }
     }
 
 
     IEnumerator DelayedAction()
     {
-        // 等待 1 秒
         yield return new WaitForSeconds(1);
+        Instantiate(explode, transform.position + new Vector3(0, 15, 0), explode.transform.rotation);
+    }
+    IEnumerator DelayedAction1()
+    {
+        yield return new WaitForSeconds(5);
         Die();
     }
 
@@ -93,6 +105,7 @@ public class Enemy : MonoBehaviour
     void Die()
     {
         // Instantiate(ragdoll, transform.position,transform.rotation);
+        
         Destroy(this.gameObject);
     }
  

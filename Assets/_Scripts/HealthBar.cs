@@ -8,8 +8,8 @@ public class HealthBar : MonoBehaviour
     public Image hpImage;
     public Image hpEffectImage;
 
-    [HideInInspector] public float hp;
-    [SerializeField] public float maxHp;
+    public float hp;
+    [HideInInspector] public float maxHp;
     [SerializeField] private float hurtSpeed = 0.005f;
 
     private void Start()

@@ -8,6 +8,7 @@ public class EnemyCollider : MonoBehaviour
     public bool reachedEnemy = false;
     public float blood = 10f;
     public HealthBar healthBar;
+    public Animator enemyAnimator;
     [SerializeField] private AudioClip AttackHand;
     [SerializeField] private ParticleSystem explode;
 
@@ -24,6 +25,8 @@ public class EnemyCollider : MonoBehaviour
             AudioSource.PlayClipAtPoint(AttackHand, new(transform.position.x, -6, transform.position.z), 1f);
             explode.Play();
             healthBar.hp --;
+            enemyAnimator.SetTrigger("damage");
+            
         }
     }
 }

@@ -39878,7 +39878,8 @@ MonoBehaviour:
   attackCD: 3
   attackRange: 14
   aggroRange: 102.3
-  enemyCollider: {fileID: 531790064}
+  healthBar: {fileID: 1573380725}
+  explode: {fileID: 19800006, guid: a49596ebf788acd4ab1281bffea444b1, type: 3}
 --- !u!195 &1385910086
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -39901,6 +39902,12 @@ NavMeshAgent:
   m_BaseOffset: 0
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
+--- !u!95 &1385910087 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 9500000, guid: 4835a6657e57ded45b7a7fe2c2d62822,
+    type: 3}
+  m_PrefabInstance: {fileID: 1385910081}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &1385910088 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 400094, guid: 4835a6657e57ded45b7a7fe2c2d62822,
@@ -50894,7 +50901,8 @@ MonoBehaviour:
   attackCD: 3
   attackRange: 14
   aggroRange: 102.3
-  enemyCollider: {fileID: 0}
+  healthBar: {fileID: 0}
+  explode: {fileID: 0}
 --- !u!114 &1752897857
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -61597,6 +61605,11 @@ PrefabInstance:
       propertyPath: showEnemy
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 6553313474765951466, guid: 7830fe464e14a734c8a541304526261f,
+        type: 3}
+      propertyPath: playOnAwake
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7789898417152876511, guid: 7830fe464e14a734c8a541304526261f,
         type: 3}
       propertyPath: m_Icon
@@ -61616,7 +61629,7 @@ PrefabInstance:
     - target: {fileID: 9004157384445314306, guid: 7830fe464e14a734c8a541304526261f,
         type: 3}
       propertyPath: blood
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 9004157384445314306, guid: 7830fe464e14a734c8a541304526261f,
         type: 3}
@@ -61638,6 +61651,11 @@ PrefabInstance:
       propertyPath: VRRig_Robot
       value: 
       objectReference: {fileID: 914620830}
+    - target: {fileID: 9004157384445314306, guid: 7830fe464e14a734c8a541304526261f,
+        type: 3}
+      propertyPath: enemyAnimator
+      value: 
+      objectReference: {fileID: 1385910087}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
