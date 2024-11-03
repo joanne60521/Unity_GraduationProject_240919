@@ -28,6 +28,13 @@ public class VRMap_test
     // attack mode
     public InputActionReference velocityReference;
     public TextMeshProUGUI mytext;
+    public GameObject cubeEnemy;
+    public EnemyCollider EnemyCollider;
+
+
+    public float velocityValueThreshold = 0.5f;
+    public float attackDelay = 2.5f;
+
 
     [HideInInspector]
     public float velocityValue = 0;
@@ -42,16 +49,54 @@ public class VRMap_test
 
     public void Map()
     {
-        velocityValue = velocityReference.action.ReadValue<Vector3>().z;
+        if (attackMode)
+        {
+            velocityValue = velocityReference.action.ReadValue<Vector3>().z;
+            Debug.Log("controller velocity: " + velocityValue);
+            if (velocityValue > velocityValueThreshold)
+            {
+                attacking = true;
+            }
+
+            if (attacking)
+            {
+                ////attack
+                mytext.text = "> ATTACK";
+                rigTarget.position = Vector3.Lerp(rigTarget.position, cubeEnemy.transform.position, attackDelay * Time.deltaTime);
+                rigTarget.rotation = vrTarget.rotation * Quaternion.Euler(trackingRotationOffset);
+            }else
+            {
+                ////normal move in attack ready area
+                positionA = robotOrigin.transform.position + scaleUp * (vrTarget.TransformPoint(trackingPositionOffset) - playerOriginMainCam.position);
+                rotatedPositionA = robotOrigin.transform.rotation * (positionA - robotOrigin.transform.position) + robotOrigin.transform.position;
+                rigTarget.position = Vector3.Lerp(rigTarget.position, rotatedPositionA, delay * Time.deltaTime);
+                rigTarget.rotation = vrTarget.rotation * Quaternion.Euler(trackingRotationOffset);
+            }
+            if (EnemyCollider.reachedEnemy)
+            {
+                Debug.Log("reached enemy");
+                mytext.text = "> normal mode";
+                attackMode = false;
+                attacking = false;
+                EnemyCollider.reachedEnemy = false;
+            }
+        }else
+        {
+            //normal mode
+            positionA = robotOrigin.transform.position + scaleUp * (vrTarget.TransformPoint(trackingPositionOffset) - playerOriginMainCam.position);
+            rotatedPositionA = robotOrigin.transform.rotation * (positionA - robotOrigin.transform.position) + robotOrigin.transform.position;
+            rigTarget.position = Vector3.Lerp(rigTarget.position, rotatedPositionA, delay * Time.deltaTime);
+            rigTarget.rotation = vrTarget.rotation * robotOrigin.transform.rotation * Quaternion.Euler(trackingRotationOffset);
+            // Debug.Log(rigTarget.rotation + " = " + vrTarget.rotation + " * " + Quaternion.Euler(trackingRotationOffset) + " * " + robotOrigin.transform.rotation);
+        }
 
 
 
-
-        rigTarget.rotation = vrTarget.rotation * Quaternion.Euler(trackingRotationOffset);
-        // 以RobotOrigin為中心的手的位置
-        positionA = robotOrigin.transform.position + scaleUp * (vrTarget.TransformPoint(trackingPositionOffset) - playerOriginMainCam.position);
-        rotatedPositionA = robotOrigin.transform.rotation * (positionA - robotOrigin.transform.position) + robotOrigin.transform.position;
-        rigTarget.position = Vector3.Lerp(rigTarget.position, rotatedPositionA, delay * Time.deltaTime);
+        // // 以RobotOrigin為中心的手的位置
+        // positionA = robotOrigin.transform.position + scaleUp * (vrTarget.TransformPoint(trackingPositionOffset) - playerOriginMainCam.position);
+        // rotatedPositionA = robotOrigin.transform.rotation * (positionA - robotOrigin.transform.position) + robotOrigin.transform.position;
+        // rigTarget.position = Vector3.Lerp(rigTarget.position, rotatedPositionA, delay * Time.deltaTime);
+        // rigTarget.rotation = vrTarget.rotation * Quaternion.Euler(trackingRotationOffset);
     }
 
 

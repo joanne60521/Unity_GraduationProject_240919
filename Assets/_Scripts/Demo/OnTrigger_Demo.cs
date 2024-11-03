@@ -7,7 +7,7 @@ public class OnTrigger_Demo : MonoBehaviour
 {
     public string colTag = "////////";
     public TextMeshProUGUI mytext;
-    public VRRig_Robot VRRig_Robot;
+    public VRRig_test VRRig_test;
 
     private void OnTriggerEnter(Collider col)
     {
@@ -17,11 +17,11 @@ public class OnTrigger_Demo : MonoBehaviour
             mytext.text = "> attack mode";
             if (colTag == "leftCollider")
             {
-                VRRig_Robot.leftHand.attackMode = true;
+                VRRig_test.leftHand.attackMode = true;
             }
             if (colTag == "rightCollider")
             {
-                VRRig_Robot.rightHand.attackMode = true;
+                VRRig_test.rightHand.attackMode = true;
             }
         }
     }
@@ -30,15 +30,15 @@ public class OnTrigger_Demo : MonoBehaviour
     {
         if (col.tag == colTag)
         {
-            if (!VRRig_Robot.leftHand.attacking)
+            if (!VRRig_test.leftHand.attacking)
             {
                 mytext.text = "> normal mode";
-                VRRig_Robot.leftHand.attackMode = false;
+                VRRig_test.leftHand.attackMode = false;
             }
-            if (!VRRig_Robot.rightHand.attacking)
+            if (!VRRig_test.rightHand.attacking)
             {
                 mytext.text = "> normal mode";
-                VRRig_Robot.rightHand.attackMode = false;
+                VRRig_test.rightHand.attackMode = false;
             }
         }
     }

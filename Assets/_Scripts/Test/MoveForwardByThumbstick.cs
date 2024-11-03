@@ -25,5 +25,10 @@ public class MoveForwardByThumbstick : MonoBehaviour
         {
             transform.position += transform.forward *Time.deltaTime * speed;
         }
+        if (thumbstickY < -0.5)
+        {
+            transform.position += -transform.forward *Time.deltaTime * speed;
+        }
+        
     }
 }

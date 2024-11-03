@@ -19,13 +19,20 @@ public class Enemy : MonoBehaviour
     Animator animator;
     float timePassed;
     float newDestinationCD = 0.5f;
+
+
+    public EnemyCollider enemyCollider;
+
+
  
     void Start()
     {
         agent = GetComponent<NavMeshAgent>();
         animator = GetComponent<Animator>();
         player = GameObject.FindGameObjectWithTag("Player");
+
     }
+    
  
     // Update is called once per frame
     void Update()
@@ -56,7 +63,23 @@ public class Enemy : MonoBehaviour
         }
         newDestinationCD -= Time.deltaTime;
         transform.LookAt(player.transform);
+
+
+        if (enemyCollider.blood <= 0)
+        {
+            StartCoroutine(DelayedAction());
+
+        }
     }
+
+
+    IEnumerator DelayedAction()
+    {
+        // 等待 1 秒
+        yield return new WaitForSeconds(1);
+        Die();
+    }
+
  
     private void OnCollisionEnter(Collision collision)
     {
