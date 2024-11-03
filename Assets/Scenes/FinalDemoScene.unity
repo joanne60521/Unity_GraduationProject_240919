@@ -3113,6 +3113,11 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1037819451}
     m_Modifications:
+    - target: {fileID: -9112884991993687978, guid: f78efb9e32d451048a5ea854ac47d6f0,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: f78efb9e32d451048a5ea854ac47d6f0,
         type: 3}
       propertyPath: m_LocalScale.x
@@ -3131,7 +3136,7 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: f78efb9e32d451048a5ea854ac47d6f0,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 10.172185
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: f78efb9e32d451048a5ea854ac47d6f0,
         type: 3}
@@ -3141,7 +3146,7 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: f78efb9e32d451048a5ea854ac47d6f0,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 1.0579758
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: f78efb9e32d451048a5ea854ac47d6f0,
         type: 3}
@@ -3187,6 +3192,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Robot_Rigged_V4 FINAL
+      objectReference: {fileID: 0}
+    - target: {fileID: 5087078386508475528, guid: f78efb9e32d451048a5ea854ac47d6f0,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -4753,7 +4763,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &200219799
 Transform:
   m_ObjectHideFlags: 0
@@ -4763,7 +4773,7 @@ Transform:
   m_GameObject: {fileID: 200219798}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 18.64663, z: -0.5089491}
+  m_LocalPosition: {x: 1.4001454e-15, y: 18.47663, z: -0.5089491}
   m_LocalScale: {x: 2.76, y: 2.76, z: 2.76}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -12971,7 +12981,7 @@ Transform:
   m_GameObject: {fileID: 465243383}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 10.172185, y: 18.47663, z: 0.54902667}
+  m_LocalPosition: {x: 1.4001454e-15, y: 18.47663, z: -0.5089491}
   m_LocalScale: {x: 2.76, y: 2.76, z: 2.76}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -24209,7 +24219,7 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 8f729c5acab4e244abab2af612af6e78,
         type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -28971,8 +28981,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1037819451}
-  - component: {fileID: 1037819453}
-  - component: {fileID: 1037819452}
   m_Layer: 0
   m_Name: PlayerRobot
   m_TagString: Player
@@ -29000,34 +29008,6 @@ Transform:
   - {fileID: 465243384}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1037819452
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1037819450}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0f2bc69d8e63706479fc6cfc3e502274, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Cameras: {fileID: 1490468521}
---- !u!114 &1037819453
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1037819450}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1d86468ca33e3624e909f49693180509, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  rightThumbstickReference: {fileID: 6742598922123086646, guid: c348712bda248c246b8c49b3db54643f,
-    type: 3}
-  speed: 10
 --- !u!1 &1040163381
 GameObject:
   m_ObjectHideFlags: 0
@@ -57822,7 +57802,7 @@ MonoBehaviour:
     m_Style:
       shape: {fileID: 4300000, guid: 687b70eb9c49243639f9379f6965034f, type: 2}
       color: {r: 1, g: 0, b: 0, a: 0.5}
-      size: 1
+      size: 0.5
       position: {x: 0, y: 0, z: 0}
       rotation: {x: 0, y: 0, z: 0}
     m_Visible: 1
@@ -57830,7 +57810,7 @@ MonoBehaviour:
     m_Style:
       shape: {fileID: 4300000, guid: e050c2b16fe384bd994474655a4b4968, type: 2}
       color: {r: 1, g: 0, b: 0, a: 0.5}
-      size: 1
+      size: 0.5
       position: {x: 0, y: 0, z: 0}
       rotation: {x: 0, y: 0, z: 0}
     m_Visible: 1
@@ -57854,7 +57834,7 @@ MonoBehaviour:
     m_Style:
       shape: {fileID: 4300000, guid: 687b70eb9c49243639f9379f6965034f, type: 2}
       color: {r: 1, g: 0, b: 0, a: 0.5}
-      size: 1
+      size: 0.5
       position: {x: 0, y: 0, z: 0}
       rotation: {x: 0, y: 0, z: 0}
     m_Visible: 1
@@ -57862,7 +57842,7 @@ MonoBehaviour:
     m_Style:
       shape: {fileID: 4300000, guid: e050c2b16fe384bd994474655a4b4968, type: 2}
       color: {r: 1, g: 0, b: 0, a: 0.5}
-      size: 1
+      size: 0.5
       position: {x: 0, y: 0, z: 0}
       rotation: {x: 0, y: 0, z: 0}
     m_Visible: 1
