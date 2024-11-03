@@ -3505,6 +3505,10 @@ PrefabInstance:
         type: 3}
       insertIndex: -1
       addedObject: {fileID: 1110359296}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: f78efb9e32d451048a5ea854ac47d6f0,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1110359302}
   m_SourcePrefab: {fileID: 100100000, guid: f78efb9e32d451048a5ea854ac47d6f0, type: 3}
 --- !u!4 &133380874 stripped
 Transform:
@@ -3965,7 +3969,7 @@ Transform:
   m_GameObject: {fileID: 151803478}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -3.05, y: 5.507484, z: -3.18}
+  m_LocalPosition: {x: -1.1555333, y: 5.507484, z: -4.72}
   m_LocalScale: {x: 0.036231887, y: 0.036231887, z: 0.036231887}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -5150,8 +5154,8 @@ CapsuleCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 0.5
-  m_Height: 2.8737633
+  m_Radius: 0.7
+  m_Height: 2
   m_Direction: 1
   m_Center: {x: 0, y: -0.9368786, z: 0}
 --- !u!23 &195252652
@@ -6302,7 +6306,7 @@ Transform:
   m_GameObject: {fileID: 226088668}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 2.92}
+  m_LocalPosition: {x: 0, y: 0.55, z: 3.28}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -8019,6 +8023,98 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 290935750}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &292883154
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 292883155}
+  - component: {fileID: 292883158}
+  - component: {fileID: 292883157}
+  - component: {fileID: 292883156}
+  m_Layer: 5
+  m_Name: GunCrosshair (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &292883155
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 292883154}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0.03, y: 0.03, z: 0.03}
+  m_ConstrainProportionsScale: 1
+  m_Children: []
+  m_Father: {fileID: 1960154140}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 130.1, y: 130.1}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &292883156
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 292883154}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8edaeb167a0445342b0a6c769b524809, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  vRRig_Test: {fileID: 1110359298}
+  hideImg: 1
+  delay: 10
+  scaleSize: 2
+--- !u!114 &292883157
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 292883154}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 21300000, guid: 4a8ef99bfa45cad43bbc87892e97bb31, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &292883158
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 292883154}
+  m_CullTransparentMesh: 1
 --- !u!1 &298756495
 GameObject:
   m_ObjectHideFlags: 0
@@ -11937,6 +12033,7 @@ GameObject:
   - component: {fileID: 395901888}
   - component: {fileID: 395901890}
   - component: {fileID: 395901889}
+  - component: {fileID: 395901891}
   m_Layer: 5
   m_Name: ScreenCrosshair
   m_TagString: Untagged
@@ -11953,7 +12050,7 @@ RectTransform:
   m_GameObject: {fileID: 395901887}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.07, y: 0.07, z: 0.07}
+  m_LocalScale: {x: 0.059999995, y: 0.059999995, z: 0.059999995}
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 1960154140}
@@ -12001,6 +12098,22 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 395901887}
   m_CullTransparentMesh: 1
+--- !u!114 &395901891
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 395901887}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8edaeb167a0445342b0a6c769b524809, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  vRRig_Test: {fileID: 1110359298}
+  hideImg: 0
+  delay: 10
+  scaleSize: 2
 --- !u!1 &403656041
 GameObject:
   m_ObjectHideFlags: 0
@@ -14036,7 +14149,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1d86468ca33e3624e909f49693180509, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rightThumbstickReference: {fileID: 6742598922123086646, guid: c348712bda248c246b8c49b3db54643f,
+  rightThumbstickReference: {fileID: -5861253619668752441, guid: c348712bda248c246b8c49b3db54643f,
     type: 3}
   speed: 10
 --- !u!1 &467121577
@@ -16942,7 +17055,7 @@ Transform:
   m_GameObject: {fileID: 541126290}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 6.869565, z: -1.4528986}
+  m_LocalPosition: {x: 0, y: 7.32, z: -0.776}
   m_LocalScale: {x: 0.36231884, y: 0.36231884, z: 0.36231884}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -27748,10 +27861,13 @@ MonoBehaviour:
     cubeEnemy: {fileID: 0}
     EnemyCollider: {fileID: 0}
     velocityValueThreshold: 0.5
+    distanceThreshold: 20
     attackDelay: 2.5
     velocityValue: 0
     attacking: 0
     attackMode: 0
+    imgScaleUp: 0
+    cameraVisibilityWithViewport: {fileID: 0}
   leftHand:
     vrTarget: {fileID: 2100814115}
     rigTarget: {fileID: 796711154}
@@ -27768,10 +27884,13 @@ MonoBehaviour:
     cubeEnemy: {fileID: 0}
     EnemyCollider: {fileID: 0}
     velocityValueThreshold: 0.5
+    distanceThreshold: 20
     attackDelay: 2.5
     velocityValue: 0
     attacking: 0
     attackMode: 0
+    imgScaleUp: 0
+    cameraVisibilityWithViewport: {fileID: 0}
   rightHand:
     vrTarget: {fileID: 475419607}
     rigTarget: {fileID: 1874725877}
@@ -27788,10 +27907,13 @@ MonoBehaviour:
     cubeEnemy: {fileID: 0}
     EnemyCollider: {fileID: 0}
     velocityValueThreshold: 0.5
+    distanceThreshold: 20
     attackDelay: 2.5
     velocityValue: 0
     attacking: 0
     attackMode: 0
+    imgScaleUp: 0
+    cameraVisibilityWithViewport: {fileID: 0}
   robotOrigin: {fileID: 200219798}
   cubeeRed: {fileID: 8750033260632701696, guid: cf0870f199adadd45b61d8b4014c533a,
     type: 3}
@@ -32871,8 +32993,8 @@ CapsuleCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 0.5
-  m_Height: 2.6971304
+  m_Radius: 0.7
+  m_Height: 2
   m_Direction: 1
   m_Center: {x: 0, y: -0.8485637, z: 0}
 --- !u!23 &1051383505
@@ -33152,7 +33274,7 @@ Transform:
   m_GameObject: {fileID: 1068035547}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: 0.3420201, z: -0, w: 0.9396927}
-  m_LocalPosition: {x: 0, y: 0, z: 2.92}
+  m_LocalPosition: {x: 0, y: 0.54999924, z: 3.28}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -34296,10 +34418,13 @@ MonoBehaviour:
     cubeEnemy: {fileID: 1286233026}
     EnemyCollider: {fileID: 531790064}
     velocityValueThreshold: 0.5
+    distanceThreshold: 20
     attackDelay: 2.5
     velocityValue: 0
     attacking: 0
     attackMode: 0
+    imgScaleUp: 0
+    cameraVisibilityWithViewport: {fileID: 1110359302}
   leftHand:
     vrTarget: {fileID: 2100814115}
     rigTarget: {fileID: 1165893183}
@@ -34317,10 +34442,13 @@ MonoBehaviour:
     cubeEnemy: {fileID: 1286233026}
     EnemyCollider: {fileID: 531790064}
     velocityValueThreshold: 0.5
+    distanceThreshold: 20
     attackDelay: 2.5
     velocityValue: 0
     attacking: 0
     attackMode: 0
+    imgScaleUp: 0
+    cameraVisibilityWithViewport: {fileID: 1110359302}
   rightHand:
     vrTarget: {fileID: 475419607}
     rigTarget: {fileID: 1187849011}
@@ -34338,10 +34466,13 @@ MonoBehaviour:
     cubeEnemy: {fileID: 1286233026}
     EnemyCollider: {fileID: 531790064}
     velocityValueThreshold: 0.5
+    distanceThreshold: 20
     attackDelay: 2.5
     velocityValue: 0
     attacking: 0
     attackMode: 0
+    imgScaleUp: 0
+    cameraVisibilityWithViewport: {fileID: 1110359302}
   robotOrigin: {fileID: 465243383}
   cubeeRed: {fileID: 8750033260632701696, guid: cf0870f199adadd45b61d8b4014c533a,
     type: 3}
@@ -34457,6 +34588,21 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &1110359302
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1110359294}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d66ff16a4477eae4fb548b067ff8cc4b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  specificCamera: {fileID: 226088671}
+  targetObject: {fileID: 1286233026}
+  isInView: 0
 --- !u!1 &1112367619
 GameObject:
   m_ObjectHideFlags: 0
@@ -39248,10 +39394,13 @@ MonoBehaviour:
     cubeEnemy: {fileID: 0}
     EnemyCollider: {fileID: 0}
     velocityValueThreshold: 0.5
+    distanceThreshold: 20
     attackDelay: 2.5
     velocityValue: 0
     attacking: 0
     attackMode: 0
+    imgScaleUp: 0
+    cameraVisibilityWithViewport: {fileID: 0}
   leftHand:
     vrTarget: {fileID: 2100814115}
     rigTarget: {fileID: 1660281712}
@@ -39268,10 +39417,13 @@ MonoBehaviour:
     cubeEnemy: {fileID: 0}
     EnemyCollider: {fileID: 0}
     velocityValueThreshold: 0.5
+    distanceThreshold: 20
     attackDelay: 2.5
     velocityValue: 0
     attacking: 0
     attackMode: 0
+    imgScaleUp: 0
+    cameraVisibilityWithViewport: {fileID: 0}
   rightHand:
     vrTarget: {fileID: 475419607}
     rigTarget: {fileID: 845636899}
@@ -39288,10 +39440,13 @@ MonoBehaviour:
     cubeEnemy: {fileID: 0}
     EnemyCollider: {fileID: 0}
     velocityValueThreshold: 0.5
+    distanceThreshold: 20
     attackDelay: 2.5
     velocityValue: 0
     attacking: 0
     attackMode: 0
+    imgScaleUp: 0
+    cameraVisibilityWithViewport: {fileID: 0}
   robotOrigin: {fileID: 538115960}
   cubeeRed: {fileID: 8750033260632701696, guid: cf0870f199adadd45b61d8b4014c533a,
     type: 3}
@@ -41618,12 +41773,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1314918209}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
+  m_LocalRotation: {x: -0, y: 1, z: -0, w: 0}
   m_LocalPosition: {x: -502, y: -2.78, z: -491}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 1567785565}
   m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
 --- !u!198 &1316780296 stripped
 ParticleSystem:
@@ -44702,7 +44857,7 @@ Transform:
   m_GameObject: {fileID: 1417873342}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 3.5, y: 5.5074835, z: -3.1800003}
+  m_LocalPosition: {x: 1.1555333, y: 5.5074835, z: -4.7200003}
   m_LocalScale: {x: 0.036231887, y: 0.036231887, z: 0.036231887}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -45861,7 +46016,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2dee474a26af8cd4eb63fa739c9cc9c6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  leftControllerReference: {fileID: -5861253619668752441, guid: c348712bda248c246b8c49b3db54643f,
+  leftControllerReference: {fileID: 6742598922123086646, guid: c348712bda248c246b8c49b3db54643f,
     type: 3}
   turnValue: 20
   RobotOrigin: {fileID: 465243383}
@@ -48125,7 +48280,7 @@ MonoBehaviour:
   m_OverrideVoxelSize: 0
   m_VoxelSize: 0.6666667
   m_MinRegionArea: 2
-  m_NavMeshData: {fileID: 23800000, guid: 40b038369c9dbd54086c9c7d5945781b, type: 2}
+  m_NavMeshData: {fileID: 23800000, guid: 3a70b1d61837f5c419b62dc22a6dc862, type: 2}
   m_BuildHeightMesh: 0
 --- !u!4 &1567785565
 Transform:
@@ -48140,6 +48295,8 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 1314918212}
+  - {fileID: 1968701795}
   - {fileID: 1562921347}
   - {fileID: 289848995}
   - {fileID: 1873500969}
@@ -55506,7 +55663,7 @@ Transform:
   m_GameObject: {fileID: 1745327075}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0.3420201, z: -0, w: 0.9396927}
-  m_LocalPosition: {x: 0, y: 0, z: 2.92}
+  m_LocalPosition: {x: 0, y: 0.54999924, z: 3.28}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -61243,6 +61400,7 @@ RectTransform:
   m_Children:
   - {fileID: 242869402}
   - {fileID: 1816678044}
+  - {fileID: 292883155}
   - {fileID: 395901888}
   m_Father: {fileID: 951247724}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -61572,7 +61730,7 @@ Transform:
   - {fileID: 1974716474}
   - {fileID: 568547856}
   - {fileID: 781761151}
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 1567785565}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1972159464
 GameObject:
@@ -67372,6 +67530,11 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1385910088}
     m_Modifications:
+    - target: {fileID: 542606541071924016, guid: 7830fe464e14a734c8a541304526261f,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3268399659848491716, guid: 7830fe464e14a734c8a541304526261f,
         type: 3}
       propertyPath: m_LocalScale.x
@@ -67577,7 +67740,6 @@ SceneRoots:
   - {fileID: 458731768}
   - {fileID: 1305725793}
   - {fileID: 203844589}
-  - {fileID: 1968701795}
   - {fileID: 1293533668}
   - {fileID: 315324842}
   - {fileID: 536828889}
@@ -67591,4 +67753,3 @@ SceneRoots:
   - {fileID: 77236029}
   - {fileID: 1913967128}
   - {fileID: 1194924451}
-  - {fileID: 1314918212}

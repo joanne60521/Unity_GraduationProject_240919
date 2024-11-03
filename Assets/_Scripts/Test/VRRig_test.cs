@@ -33,6 +33,7 @@ public class VRMap_test
 
 
     public float velocityValueThreshold = 0.5f;
+    public float distanceThreshold = 20f;
     public float attackDelay = 2.5f;
 
 
@@ -43,17 +44,30 @@ public class VRMap_test
     [HideInInspector]
     public bool attackMode = false;
 
+    private float distance;
+    public bool imgScaleUp = false;
+    public CameraVisibilityWithViewport cameraVisibilityWithViewport;
+
 
 
 
 
     public void Map()
     {
-        if (attackMode)
+        if (attackMode && cubeEnemy != null)
         {
             velocityValue = velocityReference.action.ReadValue<Vector3>().z;
-            Debug.Log("controller velocity: " + velocityValue);
-            if (velocityValue > velocityValueThreshold)
+            distance = (cubeEnemy.transform.position - robotOrigin.transform.position).magnitude;
+            Debug.Log(distance);
+            if (distance < distanceThreshold && cameraVisibilityWithViewport.isInView)
+            {
+                imgScaleUp = true;
+            }else
+            {
+                imgScaleUp = false;
+            }
+
+            if (velocityValue > velocityValueThreshold && distance < distanceThreshold && cameraVisibilityWithViewport.isInView)
             {
                 attacking = true;
             }
@@ -86,8 +100,10 @@ public class VRMap_test
             positionA = robotOrigin.transform.position + scaleUp * (vrTarget.TransformPoint(trackingPositionOffset) - playerOriginMainCam.position);
             rotatedPositionA = robotOrigin.transform.rotation * (positionA - robotOrigin.transform.position) + robotOrigin.transform.position;
             rigTarget.position = Vector3.Lerp(rigTarget.position, rotatedPositionA, delay * Time.deltaTime);
-            rigTarget.rotation = vrTarget.rotation * robotOrigin.transform.rotation * Quaternion.Euler(trackingRotationOffset);
+            rigTarget.rotation = Quaternion.Lerp(rigTarget.rotation, vrTarget.rotation * robotOrigin.transform.rotation * Quaternion.Euler(trackingRotationOffset), delay * Time.deltaTime);
             // Debug.Log(rigTarget.rotation + " = " + vrTarget.rotation + " * " + Quaternion.Euler(trackingRotationOffset) + " * " + robotOrigin.transform.rotation);
+
+            imgScaleUp = false;
         }
 
 
