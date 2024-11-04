@@ -88,7 +88,7 @@ public class Enemy : MonoBehaviour
     }
     IEnumerator DelayedAction1()
     {
-        yield return new WaitForSeconds(5);
+        yield return new WaitForSeconds(2);
         Die();
     }
 
