@@ -9,14 +9,13 @@ public class VRMap_3
     public Transform vrTarget;
     public Transform rigTarget;
     public Transform rigTargetOri;
-    private Vector3 vrTargetOriPos;
+    public InputActionReference velValueReference;
+    private Vector3 velValue;
+    public Vector3 vrTargetOriPos;
     private Quaternion vrTargetOriRot;
     public Vector3 trackingRotationOffset;
     public float delay = 2.5f;
-    [SerializeField] InputActionReference ActivateValueReference;
-    public float activateValue;
-
-    public float rigTargetScaleUp = 145f;
+    public float rigTargetScaleUp = 15f;
 
 
     public void SetUpVar()
@@ -28,9 +27,12 @@ public class VRMap_3
 
     public void RightHandMap()
     {
-        activateValue = ActivateValueReference.action.ReadValue<float>();
-        rigTarget.position = rigTargetOri.position + rigTargetScaleUp * (vrTarget.position - vrTargetOriPos);
-        rigTarget.rotation = vrTarget.rotation * Quaternion.Euler(trackingRotationOffset);
+        velValue = velValueReference.action.ReadValue<Vector3>();
+
+        
+            rigTarget.position = Vector3.Lerp(rigTarget.position, rigTargetOri.position + rigTargetScaleUp * (vrTarget.position - vrTargetOriPos), delay * Time.deltaTime);
+            rigTarget.rotation = vrTarget.rotation * Quaternion.Euler(trackingRotationOffset);
+        
     }
 
     public void LeftHandMap()
@@ -45,16 +47,29 @@ public class VRRig_3rdReview : MonoBehaviour
 {
 
     public VRMap_3 rightHand;
+    public GameObject cubeeRed;
+    public StartGameControl startGameControl;
+    private bool setVarAlready = false;
 
     // Start is called before the first frame update
     void Start()
     {
-        rightHand.SetUpVar();
+
     }
 
     // Update is called once per frame
     void Update()
     {
-        rightHand.RightHandMap();
+        if (startGameControl.startGame)
+        {
+            if (!setVarAlready)
+            {
+                setVarAlready = true;
+                rightHand.SetUpVar();
+            }else
+            {
+                rightHand.RightHandMap();
+            }
+        }
     }
 }
