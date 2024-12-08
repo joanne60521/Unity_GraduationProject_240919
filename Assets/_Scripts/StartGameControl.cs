@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.SceneManagement;
 
 public class StartGameControl : MonoBehaviour
 {
@@ -21,10 +22,14 @@ public class StartGameControl : MonoBehaviour
         leftSelectValue = leftSelectValueReference.action.ReadValue<float>();
         
         // Start game
-        if (leftSelectValue > 0.9)
+        if (Input.GetKeyDown("space") && !startGame)
         {
             startGame = true;
-
+        }
+        
+        if (Input.GetKeyDown("r"))
+        {
+            SceneManager.LoadScene(SceneManager.GetActiveScene().name);
         }
     }
 }

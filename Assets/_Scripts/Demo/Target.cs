@@ -5,9 +5,12 @@ using UnityEngine;
 public class Target : MonoBehaviour
 {
     public float health = 50f;
-    public ParticleSystem explode;
     [SerializeField] private AudioClip audioo;
     public bool instan = false;
+    public GameObject targetObject;
+    public GameObject particlePrefab;
+
+    public TurnOnLight turnOnLight;
 
 
 
@@ -16,8 +19,11 @@ public class Target : MonoBehaviour
         health -= amount;
         if (health <= 0f)
         {
-            explode.Play();
-            AudioSource.PlayClipAtPoint(audioo, new(transform.position.x, -6, transform.position.z), 1f);
+            GameObject particleInstance = Instantiate(particlePrefab, targetObject.transform.position, Quaternion.identity);
+            Destroy(particleInstance, 0.83f); // 秒後銷毀
+
+            AudioSource.PlayClipAtPoint(audioo, new(transform.position.normalized.x, -6, transform.position.normalized.z), 1f);
+            turnOnLight.destroyCount++;
             instan = true;
             Die();
         }

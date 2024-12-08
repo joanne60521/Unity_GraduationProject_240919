@@ -20,6 +20,8 @@ public class GunFire : MonoBehaviour
     public LineRenderer lineRenderer;
     public GameObject hitWhere;
     public GameObject gunCrosshairImg;
+    public GameObject targetObject;
+    public GameObject particlePrefab;
 
     void Start()
     {
@@ -68,8 +70,12 @@ public class GunFire : MonoBehaviour
     public void Shoot()
     {
         Debug.Log("shoot");
-        muzzleFlash.Play();
-        AudioSource.PlayClipAtPoint(HandAttack, new(transform.position.x, -6, transform.position.z), 1f);
+        // muzzleFlash.Play();
+        
+        GameObject particleInstance = Instantiate(particlePrefab, targetObject.transform.position, Quaternion.identity);
+        Destroy(particleInstance, 0.83f); // 秒後銷毀
+
+        AudioSource.PlayClipAtPoint(HandAttack, new(transform.position.normalized.x, -6, transform.position.normalized.z), 0.6f);
         RaycastHit hit;
         if (Physics.Raycast(transform.position, transform.up, out hit, range))
         {

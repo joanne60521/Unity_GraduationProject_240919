@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using System.IO.Ports;
 using UnityEngine.InputSystem;
+using TMPro;
 
 public class Arduino : MonoBehaviour
 {
@@ -15,17 +16,22 @@ public class Arduino : MonoBehaviour
     private bool triggerPressed;
     public CameraShakeWhenFire cameraShakeWhenFire;
     public GunFire gunFire;
+    public int bulletCount = 0;
+    public int maxBullet = 50;
+    public TextMeshProUGUI BulletNum;
+    public TextMeshProUGUI MaxBulletNum;
 
     // Start is called before the first frame update
     void Start()
     {
-        sp.Open();
+        // sp.Open();
+        MaxBulletNum.text = "/ " + maxBullet.ToString();
     }
 
     // Update is called once per frame
     void Update()
     {
-        if(sp.IsOpen)
+        if(true)  // if(sp.IsOpen)
         {
             rightActivateValue = rightActivateValueReference.action.ReadValue<float>();
 
@@ -35,8 +41,10 @@ public class Arduino : MonoBehaviour
                 if (triggerPressed)
                 {
                     Debug.Log("fire");
-                    sp.Write("1");  // shoot
+                    // sp.Write("1");  // shoot
                     gunFire.Shoot();
+                    bulletCount++;
+                    BulletNum.text = (maxBullet - bulletCount).ToString();
                     cameraShakeWhenFire.TriggerShake();
                     triggerPressed = false;
                 }
@@ -45,6 +53,15 @@ public class Arduino : MonoBehaviour
             {
                 triggerPressed = true;
             }
+        }
+
+        if (Input.GetKeyDown("a"))
+        {
+            gunFire.Shoot();
+            bulletCount++;
+            BulletNum.text = (maxBullet - bulletCount).ToString();
+            cameraShakeWhenFire.TriggerShake();
+
         }
     }
 }

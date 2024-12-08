@@ -53,6 +53,7 @@ public class VRRig_3rdReview : MonoBehaviour
     public VRMap_3 rightHand;
     public GameObject cubeeRed;
     public StartGameControl startGameControl;
+    public TurnOnLight turnOnLight;
     private bool setVarAlready = false;
 
     // Start is called before the first frame update
@@ -64,7 +65,7 @@ public class VRRig_3rdReview : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (startGameControl.startGame)
+        if (turnOnLight.gunBool)
         {
             if (!setVarAlready)
             {

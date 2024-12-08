@@ -5,7 +5,7 @@ using UnityEngine.InputSystem;
 
 public class TurnHeadByThumbstick : MonoBehaviour
 {
-    [SerializeField] InputActionReference leftControllerReference;
+    [SerializeField] InputActionReference rightThumbstickReference;
     [SerializeField] float turnValue = 20;
     private float thumbstickX;
     private float thumbstickY;
@@ -23,9 +23,9 @@ public class TurnHeadByThumbstick : MonoBehaviour
 
     void Update()
     {
-        //Debug.Log(leftControllerReference.action.ReadValue<Vector2>());
-        thumbstickX = leftControllerReference.action.ReadValue<Vector2>().x;
-        thumbstickY = leftControllerReference.action.ReadValue<Vector2>().y;
+        //Debug.Log(rightThumbstickReference.action.ReadValue<Vector2>());
+        thumbstickX = rightThumbstickReference.action.ReadValue<Vector2>().x;
+        thumbstickY = rightThumbstickReference.action.ReadValue<Vector2>().y;
 
 
         if (transform.eulerAngles.x > yMin && transform.eulerAngles.x < 90)
