@@ -19,7 +19,7 @@ public class Target : MonoBehaviour
             explode.Play();
             AudioSource.PlayClipAtPoint(audioo, new(transform.position.x, -6, transform.position.z), 1f);
             instan = true;
-            // Die();
+            Die();
         }
     }
 

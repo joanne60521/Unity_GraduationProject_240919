@@ -20,6 +20,7 @@ public class MoveForwardByThumbstick : MonoBehaviour
     void Update()
     {
         thumbstickY = rightThumbstickReference.action.ReadValue<Vector2>().y;
+        thumbstickX = rightThumbstickReference.action.ReadValue<Vector2>().x;
 
         if (thumbstickY > 0.5)
         {
@@ -28,6 +29,14 @@ public class MoveForwardByThumbstick : MonoBehaviour
         if (thumbstickY < -0.5)
         {
             transform.position += -transform.forward *Time.deltaTime * speed;
+        }
+        if (thumbstickX > 0.5)
+        {
+            transform.position += transform.right *Time.deltaTime * speed;
+        }
+        if (thumbstickX < -0.5)
+        {
+            transform.position += -transform.right *Time.deltaTime * speed;
         }
         
     }

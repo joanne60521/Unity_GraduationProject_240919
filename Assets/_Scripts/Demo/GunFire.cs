@@ -18,7 +18,8 @@ public class GunFire : MonoBehaviour
     private float nextTimeToFire = 0f;
     public float fireRate = 5f;
     public LineRenderer lineRenderer;
-    public GameObject cubeeRed;
+    public GameObject hitWhere;
+    public GameObject gunCrosshairImg;
 
     void Start()
     {
@@ -27,6 +28,8 @@ public class GunFire : MonoBehaviour
             lineRenderer = GetComponent<LineRenderer>();
         }
         lineRenderer.positionCount = 2; // Two points (start and end)
+
+        gunCrosshairImg.SetActive(false);
     }
 
     void Update()
@@ -49,23 +52,28 @@ public class GunFire : MonoBehaviour
         RaycastHit hit;
         if (Physics.Raycast(transform.position, transform.up, out hit, range))
         {
-            Debug.DrawRay(transform.position, hit.point, Color.yellow);
+            // Debug.DrawRay(transform.position, hit.point, Color.yellow);
             // lineRenderer.SetPosition(0, transform.position);
             // lineRenderer.SetPosition(1, hit.point);
-            // Instantiate(cubeeRed, hit.point, transform.rotation);
-            cubeeRed.transform.position = hit.point;
+            // Instantiate(hitWhere, hit.point, transform.rotation);
+
+            hitWhere.transform.position = hit.point;
+            gunCrosshairImg.SetActive(true);
+        }else
+        {
+            gunCrosshairImg.SetActive(false);
         }
     }
 
     public void Shoot()
     {
+        Debug.Log("shoot");
         muzzleFlash.Play();
         AudioSource.PlayClipAtPoint(HandAttack, new(transform.position.x, -6, transform.position.z), 1f);
         RaycastHit hit;
-        if (Physics.Raycast(transform.position, -transform.forward, out hit, range))
+        if (Physics.Raycast(transform.position, transform.up, out hit, range))
         {
             Debug.Log("hit " + hit.transform.name);
-            Debug.DrawRay(transform.position, transform.forward * hit.distance, Color.yellow);
             Target target = hit.transform.GetComponent<Target>();
             if (target != null)
             {

@@ -28,11 +28,15 @@ public class VRMap_3
     public void RightHandMap()
     {
         velValue = velValueReference.action.ReadValue<Vector3>();
-
-        
+        // if (velValue.magnitude > 0.1)
+        // {
             rigTarget.position = Vector3.Lerp(rigTarget.position, rigTargetOri.position + rigTargetScaleUp * (vrTarget.position - vrTargetOriPos), delay * Time.deltaTime);
             rigTarget.rotation = vrTarget.rotation * Quaternion.Euler(trackingRotationOffset);
-        
+        // }else
+        // {
+        //     rigTarget.position = rigTarget.position;
+        //     // rigTarget.rotation = rigTarget.rotation;
+        // }
     }
 
     public void LeftHandMap()

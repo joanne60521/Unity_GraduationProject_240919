@@ -5,18 +5,19 @@ using UnityEngine;
 public class GunCrosshairRay : MonoBehaviour
 {
     public LayerMask ui;
-    public Transform muzzle;
+    public Transform hitWhere;
     public RaycastHit crosshair;
+    public RaycastHit gunfire;
     // Start is called before the first frame update
     void Start()
     {
-        muzzle = GameObject.Find("Muzzle").transform;
+        hitWhere = GameObject.Find("HitWhere").transform;
     }
 
     // Update is called once per frame
     void Update()
     {
-        transform.LookAt(muzzle);
+        transform.LookAt(hitWhere);
         if (Physics.Raycast(transform.position, transform.forward, out crosshair, ui))
         {
             Debug.DrawRay(transform.position, transform.forward * crosshair.distance, Color.yellow);
