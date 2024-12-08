@@ -14,6 +14,7 @@ public class Arduino : MonoBehaviour
     public float fireRate = 0.3f;
     private bool triggerPressed;
     public CameraShakeWhenFire cameraShakeWhenFire;
+    public GunFire gunFire;
 
     // Start is called before the first frame update
     void Start()
@@ -35,6 +36,7 @@ public class Arduino : MonoBehaviour
                 {
                     Debug.Log("fire");
                     sp.Write("1");  // shoot
+                    gunFire.Shoot();
                     cameraShakeWhenFire.TriggerShake();
                     triggerPressed = false;
                 }
