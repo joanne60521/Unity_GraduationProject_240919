@@ -9,6 +9,7 @@ public class Target : MonoBehaviour
     public bool instan = false;
     public GameObject targetObject;
     public GameObject particlePrefab;
+    public GameObject particlePrefab2;
 
     public TurnOnLight turnOnLight;
 
@@ -17,6 +18,7 @@ public class Target : MonoBehaviour
     public void TakeDamage (float amount)
     {
         health -= amount;
+        GameObject particleInstance2 = Instantiate(particlePrefab2, targetObject.transform.position, Quaternion.identity);
         if (health <= 0f)
         {
             GameObject particleInstance = Instantiate(particlePrefab, targetObject.transform.position, Quaternion.identity);

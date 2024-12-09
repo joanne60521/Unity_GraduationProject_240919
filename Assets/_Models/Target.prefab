@@ -123,3 +123,5 @@ MonoBehaviour:
   instan: 0
   targetObject: {fileID: 5256641432084284672}
   particlePrefab: {fileID: 100008, guid: 1dbc518224e49f34095aab42fe05751a, type: 3}
+  particlePrefab2: {fileID: 100006, guid: 4575df893a6e3f64a8283dee38413a34, type: 3}
+  turnOnLight: {fileID: 0}

@@ -1814,6 +1814,11 @@ PrefabInstance:
       propertyPath: turnOnLight
       value: 
       objectReference: {fileID: 222690723}
+    - target: {fileID: 2986078584409491587, guid: ad5418ae2393c4e4187aca597e14789e,
+        type: 3}
+      propertyPath: particlePrefab2
+      value: 
+      objectReference: {fileID: 100006, guid: 4575df893a6e3f64a8283dee38413a34, type: 3}
     - target: {fileID: 3161306297529400263, guid: ad5418ae2393c4e4187aca597e14789e,
         type: 3}
       propertyPath: m_LocalScale.x
@@ -3555,6 +3560,11 @@ PrefabInstance:
       propertyPath: turnOnLight
       value: 
       objectReference: {fileID: 222690723}
+    - target: {fileID: 2986078584409491587, guid: ad5418ae2393c4e4187aca597e14789e,
+        type: 3}
+      propertyPath: particlePrefab2
+      value: 
+      objectReference: {fileID: 100006, guid: 4575df893a6e3f64a8283dee38413a34, type: 3}
     - target: {fileID: 3161306297529400263, guid: ad5418ae2393c4e4187aca597e14789e,
         type: 3}
       propertyPath: m_LocalScale.x
@@ -6263,6 +6273,7 @@ MonoBehaviour:
   instan: 0
   targetObject: {fileID: 217145420}
   particlePrefab: {fileID: 100008, guid: 1dbc518224e49f34095aab42fe05751a, type: 3}
+  particlePrefab2: {fileID: 0}
   turnOnLight: {fileID: 222690723}
 --- !u!1 &219820008
 GameObject:
@@ -12161,6 +12172,7 @@ MonoBehaviour:
   instan: 0
   targetObject: {fileID: 399697556}
   particlePrefab: {fileID: 100008, guid: 1dbc518224e49f34095aab42fe05751a, type: 3}
+  particlePrefab2: {fileID: 0}
   turnOnLight: {fileID: 222690723}
 --- !u!1 &403656041
 GameObject:
@@ -13078,6 +13090,11 @@ PrefabInstance:
       propertyPath: turnOnLight
       value: 
       objectReference: {fileID: 222690723}
+    - target: {fileID: 2986078584409491587, guid: ad5418ae2393c4e4187aca597e14789e,
+        type: 3}
+      propertyPath: particlePrefab2
+      value: 
+      objectReference: {fileID: 100006, guid: 4575df893a6e3f64a8283dee38413a34, type: 3}
     - target: {fileID: 3161306297529400263, guid: ad5418ae2393c4e4187aca597e14789e,
         type: 3}
       propertyPath: m_LocalScale.x
@@ -23255,6 +23272,11 @@ PrefabInstance:
       propertyPath: turnOnLight
       value: 
       objectReference: {fileID: 222690723}
+    - target: {fileID: 2986078584409491587, guid: ad5418ae2393c4e4187aca597e14789e,
+        type: 3}
+      propertyPath: particlePrefab2
+      value: 
+      objectReference: {fileID: 100006, guid: 4575df893a6e3f64a8283dee38413a34, type: 3}
     - target: {fileID: 3161306297529400263, guid: ad5418ae2393c4e4187aca597e14789e,
         type: 3}
       propertyPath: m_LocalScale.x
@@ -55202,6 +55224,11 @@ PrefabInstance:
       propertyPath: turnOnLight
       value: 
       objectReference: {fileID: 222690723}
+    - target: {fileID: 2986078584409491587, guid: ad5418ae2393c4e4187aca597e14789e,
+        type: 3}
+      propertyPath: particlePrefab2
+      value: 
+      objectReference: {fileID: 100006, guid: 4575df893a6e3f64a8283dee38413a34, type: 3}
     - target: {fileID: 3161306297529400263, guid: ad5418ae2393c4e4187aca597e14789e,
         type: 3}
       propertyPath: m_LocalScale.x
