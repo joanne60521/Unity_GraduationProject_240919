@@ -26,6 +26,10 @@ public class Arduino : MonoBehaviour
     void Start()
     {
         sp.Open();
+        if (sp.IsOpen)
+        {
+            Debug.Log("sp.IsOpen");
+        }
         MaxBulletNum.text = "/ " + maxBullet.ToString();
     }
 
