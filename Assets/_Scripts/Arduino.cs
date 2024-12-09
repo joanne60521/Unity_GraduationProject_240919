@@ -20,18 +20,19 @@ public class Arduino : MonoBehaviour
     public int maxBullet = 50;
     public TextMeshProUGUI BulletNum;
     public TextMeshProUGUI MaxBulletNum;
+    public TurnOnLight turnOnLight;
 
     // Start is called before the first frame update
     void Start()
     {
-        // sp.Open();
+        sp.Open();
         MaxBulletNum.text = "/ " + maxBullet.ToString();
     }
 
     // Update is called once per frame
     void Update()
     {
-        if(true)  // if(sp.IsOpen)
+        if(sp.IsOpen && turnOnLight.gunBool) 
         {
             rightActivateValue = rightActivateValueReference.action.ReadValue<float>();
 
@@ -41,7 +42,7 @@ public class Arduino : MonoBehaviour
                 if (triggerPressed)
                 {
                     Debug.Log("fire");
-                    // sp.Write("1");  // shoot
+                    sp.Write("1");  // shoot
                     gunFire.Shoot();
                     bulletCount++;
                     BulletNum.text = (maxBullet - bulletCount).ToString();

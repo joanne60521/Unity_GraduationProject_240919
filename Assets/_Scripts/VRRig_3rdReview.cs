@@ -22,6 +22,10 @@ public class VRMap_3
     {
         vrTargetOriPos = vrTarget.position;
         vrTargetOriRot = vrTarget.rotation;
+    }
+
+    public void rigTargetToOri()
+    {
         rigTarget.position = rigTargetOri.position;
     }
 
@@ -54,7 +58,8 @@ public class VRRig_3rdReview : MonoBehaviour
     public GameObject cubeeRed;
     public StartGameControl startGameControl;
     public TurnOnLight turnOnLight;
-    private bool setVarAlready = false;
+    private bool rigTargetToOriAlredy = false;
+    private bool setUpVarAlready = false;
 
     // Start is called before the first frame update
     void Start()
@@ -65,12 +70,17 @@ public class VRRig_3rdReview : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (startGameControl.startGame && !setUpVarAlready)
+        {
+            setUpVarAlready = true;
+            rightHand.SetUpVar();
+        }
         if (turnOnLight.gunBool)
         {
-            if (!setVarAlready)
+            if (!rigTargetToOriAlredy)
             {
-                setVarAlready = true;
-                rightHand.SetUpVar();
+                rigTargetToOriAlredy = true;
+                rightHand.rigTargetToOri();
             }else
             {
                 rightHand.RightHandMap();
