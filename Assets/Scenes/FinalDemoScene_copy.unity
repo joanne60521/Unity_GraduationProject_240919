@@ -1811,6 +1811,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2986078584409491587, guid: ad5418ae2393c4e4187aca597e14789e,
         type: 3}
+      propertyPath: health
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 2986078584409491587, guid: ad5418ae2393c4e4187aca597e14789e,
+        type: 3}
       propertyPath: turnOnLight
       value: 
       objectReference: {fileID: 222690723}
@@ -1818,7 +1823,7 @@ PrefabInstance:
         type: 3}
       propertyPath: particlePrefab2
       value: 
-      objectReference: {fileID: 100006, guid: 4575df893a6e3f64a8283dee38413a34, type: 3}
+      objectReference: {fileID: 100004, guid: b46890100828db6429ff69c322b45893, type: 3}
     - target: {fileID: 3161306297529400263, guid: ad5418ae2393c4e4187aca597e14789e,
         type: 3}
       propertyPath: m_LocalScale.x
@@ -3154,7 +3159,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: / 50
+  m_text: / 20
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 52d0631b6858f0b4eb40fcbfd3f26932, type: 2}
   m_sharedMaterial: {fileID: -2935757905622759859, guid: 52d0631b6858f0b4eb40fcbfd3f26932,
@@ -3557,6 +3562,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2986078584409491587, guid: ad5418ae2393c4e4187aca597e14789e,
         type: 3}
+      propertyPath: health
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 2986078584409491587, guid: ad5418ae2393c4e4187aca597e14789e,
+        type: 3}
       propertyPath: turnOnLight
       value: 
       objectReference: {fileID: 222690723}
@@ -3564,7 +3574,7 @@ PrefabInstance:
         type: 3}
       propertyPath: particlePrefab2
       value: 
-      objectReference: {fileID: 100006, guid: 4575df893a6e3f64a8283dee38413a34, type: 3}
+      objectReference: {fileID: 100004, guid: b46890100828db6429ff69c322b45893, type: 3}
     - target: {fileID: 3161306297529400263, guid: ad5418ae2393c4e4187aca597e14789e,
         type: 3}
       propertyPath: m_LocalScale.x
@@ -13087,6 +13097,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2986078584409491587, guid: ad5418ae2393c4e4187aca597e14789e,
         type: 3}
+      propertyPath: health
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 2986078584409491587, guid: ad5418ae2393c4e4187aca597e14789e,
+        type: 3}
       propertyPath: turnOnLight
       value: 
       objectReference: {fileID: 222690723}
@@ -13094,7 +13109,7 @@ PrefabInstance:
         type: 3}
       propertyPath: particlePrefab2
       value: 
-      objectReference: {fileID: 100006, guid: 4575df893a6e3f64a8283dee38413a34, type: 3}
+      objectReference: {fileID: 100004, guid: b46890100828db6429ff69c322b45893, type: 3}
     - target: {fileID: 3161306297529400263, guid: ad5418ae2393c4e4187aca597e14789e,
         type: 3}
       propertyPath: m_LocalScale.x
@@ -23240,7 +23255,7 @@ MonoBehaviour:
   cameraShakeWhenFire: {fileID: 413807190}
   gunFire: {fileID: 2002254582}
   bulletCount: 0
-  maxBullet: 50
+  maxBullet: 20
   BulletNum: {fileID: 1034287940}
   MaxBulletNum: {fileID: 98283072}
   turnOnLight: {fileID: 222690723}
@@ -23269,6 +23284,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2986078584409491587, guid: ad5418ae2393c4e4187aca597e14789e,
         type: 3}
+      propertyPath: health
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 2986078584409491587, guid: ad5418ae2393c4e4187aca597e14789e,
+        type: 3}
       propertyPath: turnOnLight
       value: 
       objectReference: {fileID: 222690723}
@@ -23276,7 +23296,7 @@ PrefabInstance:
         type: 3}
       propertyPath: particlePrefab2
       value: 
-      objectReference: {fileID: 100006, guid: 4575df893a6e3f64a8283dee38413a34, type: 3}
+      objectReference: {fileID: 100004, guid: b46890100828db6429ff69c322b45893, type: 3}
     - target: {fileID: 3161306297529400263, guid: ad5418ae2393c4e4187aca597e14789e,
         type: 3}
       propertyPath: m_LocalScale.x
@@ -33022,7 +33042,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 50
+  m_text: 20
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 52d0631b6858f0b4eb40fcbfd3f26932, type: 2}
   m_sharedMaterial: {fileID: -2935757905622759859, guid: 52d0631b6858f0b4eb40fcbfd3f26932,
@@ -55221,6 +55241,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2986078584409491587, guid: ad5418ae2393c4e4187aca597e14789e,
         type: 3}
+      propertyPath: health
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 2986078584409491587, guid: ad5418ae2393c4e4187aca597e14789e,
+        type: 3}
       propertyPath: turnOnLight
       value: 
       objectReference: {fileID: 222690723}
@@ -55228,7 +55253,7 @@ PrefabInstance:
         type: 3}
       propertyPath: particlePrefab2
       value: 
-      objectReference: {fileID: 100006, guid: 4575df893a6e3f64a8283dee38413a34, type: 3}
+      objectReference: {fileID: 100004, guid: b46890100828db6429ff69c322b45893, type: 3}
     - target: {fileID: 3161306297529400263, guid: ad5418ae2393c4e4187aca597e14789e,
         type: 3}
       propertyPath: m_LocalScale.x
